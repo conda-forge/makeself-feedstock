@@ -1,5 +1,5 @@
 {% set name = "makeself" %}
-{% set version = "2.4.3" %}
+{% set version = "2.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,46 +7,46 @@ package:
 
 source:
   url: https://github.com/megastep/makeself/archive/release-{{ version }}.tar.gz
-  sha256: b4c81c3d0a7c81459459319e9fc75320e057ea908430aa8a020be1993d6b74c8
+  sha256: 705d0376db9109a8ef1d4f3876c9997ee6bed454a23619e1dbc03d25033e46ea
   patches:
-  - conda-prefix.patch
+    - conda-prefix.patch
 
 build:
   number: 0
-  skip: True  # [win]
+  skip: true  # [win]
 
 requirements:
   run:
-  - tar
-  - findutils
-  - gzip
+    - tar
+    - findutils
+    - gzip
   # for md5sum, cksum, sha256sum
-  - coreutils
+    - coreutils
   # enables --gpg-encrypt
-  - gnupg
+    - gnupg
   # enables --ssl-encrypt
-  - openssl
+    - openssl
   # enables --pigz
-  - pigz
+    - pigz
   # enables --zstd
-  - zstd
+    - zstd
   # enables --bzip2
-  - bzip2
+    - bzip2
   # enables --pbzip2
-  - pbzip2
+    - pbzip2
   # enables --xz
-  - xz
+    - xz
   # enables --lzo
-  - lzo
+    - lzo
   # enables --lz4
-  - lz4
+    - lz4
 
 about:
   home: https://github.com/megastep/makeself
   license: GPL-2.0-or-later
   license_family: GPL
   license_file: COPYING
-  summary: 'Make self-extractable archives on Unix'
+  summary: Make self-extractable archives on Unix
   description: |
     makeself.sh is a small shell script that generates a self-extractable
     compressed tar archive from a directory. The resulting file appears as a
