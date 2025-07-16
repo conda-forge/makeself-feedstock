@@ -35,7 +35,7 @@ requirements:
   # enables --pbzip2
     - pbzip2
   # enables --xz
-    - xz
+    - liblzma-devel
   # enables --lzo
     - lzo
   # enables --lz4
