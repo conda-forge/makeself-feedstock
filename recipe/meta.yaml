@@ -12,7 +12,7 @@ source:
     - conda-prefix.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
@@ -35,7 +35,7 @@ requirements:
   # enables --pbzip2
     - pbzip2
   # enables --xz
-    - xz
+    - liblzma-devel
   # enables --lzo
     - lzo
   # enables --lz4
@@ -62,3 +62,4 @@ about:
 extra:
   recipe-maintainers:
     - saraedum
+    - hobu
