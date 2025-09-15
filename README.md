@@ -22,7 +22,6 @@ script). This is pretty similar to archives generated with WinZip
 Self-Extractor in the Windows world. Makeself archives also include
 checksums for integrity self-validation (CRC and/or MD5/SHA256 checksums).
 
-
 Current build status
 ====================
 
